@@ -1,8 +1,10 @@
 plugins {
-    id("com.android.application")
-    id("kotlin-android")
-    id("kotlin-android-extensions")
+    id(Plugins.ANDROID_APP)
+    id(Plugins.KOTLIN_ANDROID)
+    id(Plugins.ANDROID_HILT)
+    id(Plugins.KOTLIN_KAPT)
 }
+
 android {
     compileSdkVersion (Versions.compileSdk)
     buildToolsVersion (Versions.buildTools)
@@ -17,6 +19,15 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
@@ -27,11 +38,8 @@ android {
 
 dependencies {
     implementation (fileTree("libs") { include(listOf("*.jar")) } )
-    implementation (Dependencies.kotlin)
-    implementation ("${Dependencies.androidx["core"]}")
-    implementation ("${Dependencies.androidx["appcompat"]}")
-    testImplementation ("${Dependencies.testing["junit"]}")
-    androidTestImplementation ("${Dependencies.testing["espresso"]}")
-    androidTestImplementation ("${Dependencies.testing["junit"]}")
+    addAndroidBaseDepencencies()
+    addTestDependencies()
+    addDiDependencies()
 
 }

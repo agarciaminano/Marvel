@@ -1,1 +1,1 @@
-C:\Projects\Marvel\buildSrc\build\classes\kotlin\main\Dependencies.class;C:\Projects\Marvel\buildSrc\build\classes\kotlin\main\Versions.class
+C:\Projects\Marvel\buildSrc\build\classes\kotlin\main\Dependencies.class;C:\Projects\Marvel\buildSrc\build\classes\kotlin\main\DependenciesKt.class;C:\Projects\Marvel\buildSrc\build\classes\kotlin\main\Plugins.class;C:\Projects\Marvel\buildSrc\build\classes\kotlin\main\Versions.class
