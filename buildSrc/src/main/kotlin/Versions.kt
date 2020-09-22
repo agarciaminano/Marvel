@@ -7,6 +7,7 @@ object Versions {
         "constraintLayout" to "2.0.0-rc1",
         "activity" to "1.1.0"
     )
+    val navigation = "2.3.0"
 
     val testing = mapOf(
         "junit" to "4.12",

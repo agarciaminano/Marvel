@@ -15,6 +15,14 @@ object Dependencies {
         "activity" to "androidx.activity:activity-ktx:${Versions.androidx["activity"]}"
     )
 
+    val navigation = mapOf(
+        "fragment" to "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}",
+        "ui" to "androidx.navigation:navigation-ui-ktx:${Versions.navigation}",
+        "testing" to "androidx.navigation:navigation-testing:${Versions.navigation}",
+        "safe-args" to  "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navigation}"
+    )
+
+
     val testing = mapOf(
         "junit" to "junit:junit:${Versions.testing["junit"]}",
         "junitAndroid" to "androidx.test.ext:junit:${Versions.testing["junitAndroid"]}",
@@ -49,5 +57,8 @@ fun DependencyHandlerScope.addAndroidBaseDepencencies() {
     add("implementation", kotlin)
     add("implementation", "${Dependencies.androidx["core"]}")
     add("implementation", "${Dependencies.androidx["appcompat"]}")
+    add("implementation", "${Dependencies.navigation["fragment"]}")
+    add("implementation", "${Dependencies.navigation["ui"]}")
+    add("androidTestImplementation", "${Dependencies.navigation["testing"]}")
 }
 
