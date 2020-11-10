@@ -2,11 +2,17 @@ object Versions {
     const val kotlin = "1.4.0"
     const val material = "1.3.0-alpha02"
 
+    const val retrofit = "2.9.0"
+    const val gson = "2.8.6"
+    const val gsonConverter = "2.5.0"
+    const val livedata = "2.2.0"
+
     val androidx = mapOf(
         "core" to "1.2.0",
         "constraintLayout" to "2.0.0-rc1",
         "activity" to "1.1.0"
     )
+
     val navigation = "2.3.0"
 
     val testing = mapOf(
@@ -20,6 +26,9 @@ object Versions {
         "viewmodel" to "1.0.0-alpha02",
         "gradle-plugin" to "2.28-alpha"
     )
+
+    val paging3 = "3.0.0-alpha03"
+    val picasso = "2.71828"
 
 
     val targetSdk = 30

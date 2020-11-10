@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="marvel_api_key">INSERT_API_KEY_HERE</string>
+    <string name="marvel_public_api_key">f142fd33d4b670c8095fffd5c3202da1</string>
+    <string name="marvel_private_api_key">39f88a9aa4898b563872930f19723126254ca3dd</string>
 </resources>

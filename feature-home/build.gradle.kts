@@ -1,17 +1,18 @@
-
 plugins {
-    id("com.android.application")
-    id("kotlin-android")
+    id(Plugins.ANDROID_LIBRARY)
+    id(Plugins.ANDROID_HILT)
+    id(Plugins.KOTLIN_ANDROID)
+    id(Plugins.KOTLIN_ANDROID_EXTENSIONS)
+    id(Plugins.KOTLIN_KAPT)
 }
 
 android {
-    compileSdkVersion (Versions.compileSdk)
-    buildToolsVersion (Versions.buildTools)
+    compileSdkVersion(Versions.compileSdk)
+    buildToolsVersion(Versions.buildTools)
 
     defaultConfig {
-        applicationId = "com.example.marvel"
-        minSdkVersion (Versions.minSdk)
-        targetSdkVersion (Versions.targetSdk)
+        minSdkVersion(Versions.minSdk)
+        targetSdkVersion(Versions.targetSdk)
         versionCode = Versions.versionCode
         versionName = Versions.versionName
 
@@ -30,18 +31,21 @@ android {
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
 }
 
 dependencies {
-    implementation (fileTree("libs") { include(listOf("*.jar")) } )
-    implementation (Dependencies.kotlin)
-    implementation ("${Dependencies.androidx["core"]}")
-    implementation ("${Dependencies.androidx["appcompat"]}")
-    testImplementation ("${Dependencies.testing["junit"]}")
-    androidTestImplementation ("${Dependencies.testing["espresso"]}")
-    androidTestImplementation ("${Dependencies.testing["junit"]}")
+    implementation(fileTree("libs") { include(listOf("*.jar")) })
+    addBaseModuleDepencencies()
+    implementation(Dependencies.retrofit)
+    implementation(Dependencies.gson)
+    addAndroidBaseDepencencies()
+    addTestDependencies()
+    addDiDependencies()
 
 }
