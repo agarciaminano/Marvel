@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_toolbar_ic_search_title">Search</string>
+    <string name="home_toolbar_cancel_tv_text">Cancelar</string>
+    <string name="home_toolbar_et_hint">Buscar personajes...</string>
+</resources>

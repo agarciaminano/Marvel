@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/default_margin_8">
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/item_character_iv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/character_image_height"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/item_character_name_tv"
+            style="@style/MarvelCharacterTextView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/chracter_text_height"
+            tools:text="Spiderman" />
+
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

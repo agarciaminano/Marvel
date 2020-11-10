@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="character_image_height">200dp</dimen>
+    <dimen name="appbar_height">100dp</dimen>
+    <dimen name="chracter_text_height">35dp</dimen>
+    <dimen name="default_margin_8">8dp</dimen>
+</resources>

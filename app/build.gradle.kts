@@ -11,7 +11,7 @@ android {
     buildToolsVersion (Versions.buildTools)
 
     defaultConfig {
-        applicationId = "com.example.marvel"
+        applicationId = "com.alejandro.marvel"
         minSdkVersion (Versions.minSdk)
         targetSdkVersion (Versions.targetSdk)
         versionCode = Versions.versionCode
@@ -42,5 +42,8 @@ dependencies {
     addAndroidBaseDepencencies()
     addTestDependencies()
     addDiDependencies()
-
+    addFeatureModuleDepencencies()
+    implementation(Dependencies.retrofit)
+    implementation(Dependencies.gson)
+    implementation(Dependencies.gsonConverter)
 }
